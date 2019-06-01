@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>TodoList </title>
 </head>
 <body>
     <header>
@@ -13,7 +13,7 @@
     <hr>
     <ul>
         {% for todo in todos %}
-        <li> {{todo.title}}: {{todo.text}} </li>
+        <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a></li>
         {% endfor %}
     </ul>
 </body>
