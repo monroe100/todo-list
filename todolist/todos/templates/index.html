@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TodoList </title>
-</head>
-<body>
-    <header>
-        <h1> TodoList </h1>
-    </header>
-    <hr>
+{%include 'partials/header.html'%}
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/styles.css'%}">
     <ul>
         {% for todo in todos %}
         <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a></li>
         {% endfor %}
     </ul>
-</body>
-</html>
+    {%include 'partials/footer.html'%}
 
 
